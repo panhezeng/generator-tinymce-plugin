@@ -1,0 +1,79 @@
+{
+  "name": "generator-tinymce-plugin-es",
+  "version": "0.0.0",
+  "description": "generator tinymce plugin",
+  "keywords": [
+    "tinymce plugin",
+    "yeoman generator"
+  ],
+  "homepage": "https://github.com/panhezeng/generator-tinymce-plugin-es.git#readme",
+  "bugs": {
+    "url": "https://github.com/panhezeng/generator-tinymce-plugin-es/issues",
+    "email": "panhezeng@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "潘何增",
+    "email": "panhezeng@gmail.com",
+    "url": "http://apsay.com/"
+  },
+  "contributors": [],
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "browser": "",
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panhezeng/generator-tinymce-plugin-es.git"
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "config": {},
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "peerdependencies": {},
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  },
+  "private": false,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{md,json,html,css,less}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "maintained node versions"
+  ],
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

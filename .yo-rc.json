@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Pan Hezeng",
+      "authorEmail": "panhezeng@gmail.com",
+      "authorUrl": "http://apsay.com/"
+    }
+  }
+}
