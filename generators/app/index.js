@@ -5,7 +5,7 @@ const yosay = require("yosay");
 const shell = require("shelljs");
 module.exports = class extends Generator {
   writing() {
-    this.log(JSON.stringify(shell.ls("-a")));
+    this.log(JSON.stringify(shell.ls("-a", this.sourceRoot())));
   }
 
   install() {}
