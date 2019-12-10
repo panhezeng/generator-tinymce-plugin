@@ -6,12 +6,11 @@ const yosay = require("yosay");
 module.exports = class extends Generator {
   writing() {
     this.fs.copy(
-      this.templatePath(".gitignore"),
-      this.destinationPath(".gitignore")
+      this.templatePath("babel.config.js"),
+      this.destinationPath("babel.config.js")
     );
   }
 
   install() {
-    // this.installDependencies();
   }
 };
