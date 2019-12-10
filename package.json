@@ -1,6 +1,6 @@
 {
   "name": "@panhezeng/generator-tinymce-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generator tinymce plugin",
   "keywords": [
     "tinymce plugin",
