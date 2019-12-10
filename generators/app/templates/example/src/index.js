@@ -17,8 +17,6 @@ class App extends React.Component {
     });
   }
 
-  componentWillUnmount() {}
-
   render() {
     return (
       <textarea

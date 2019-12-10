@@ -11,6 +11,6 @@ describe("generator-tinymce-plugin-es:app", () => {
   });
 
   it("creates files", () => {
-    assert.file(["dummyfile.txt"]);
+    assert.file([".eslintrc.js", "src/index.js", "example/src/index.js"]);
   });
 });
