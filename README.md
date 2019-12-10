@@ -1,1 +1,1 @@
-# generator-tinymce-plugin-es
+# generator-tinymce-plugin

@@ -1,14 +1,14 @@
 {
-  "name": "generator-tinymce-plugin-es",
+  "name": "@panhezeng/generator-tinymce-plugin",
   "version": "0.0.0",
   "description": "generator tinymce plugin",
   "keywords": [
     "tinymce plugin",
     "yeoman generator"
   ],
-  "homepage": "https://github.com/panhezeng/generator-tinymce-plugin-es.git#readme",
+  "homepage": "https://github.com/panhezeng/generator-tinymce-plugin#readme",
   "bugs": {
-    "url": "https://github.com/panhezeng/generator-tinymce-plugin-es/issues",
+    "url": "https://github.com/panhezeng/generator-tinymce-plugin/issues",
     "email": "panhezeng@gmail.com"
   },
   "license": "Apache-2.0",
@@ -26,7 +26,7 @@
   "bin": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panhezeng/generator-tinymce-plugin-es.git"
+    "url": "git+https://github.com/panhezeng/generator-tinymce-plugin.git"
   },
   "scripts": {
     "pretest": "eslint .",
