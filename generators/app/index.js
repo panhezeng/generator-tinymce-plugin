@@ -30,9 +30,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(this.templatePath("**/*"), this.destinationRoot(), {
-      globOptions: { dot: true }
-    });
+    this.fs.copy(this.templatePath(".gitignore"), this.destinationPath(".gitignore"));
   }
 
   install() {
