@@ -32,7 +32,8 @@
     "url": "git+https://github.com/panhezeng/tinymce-plugin-text-indent-outdent.git"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "lint": "eslint --fix 'src/**'",
+    "build": "npm run lint && webpack --mode production",
     "install:example": "cd example && npm install",
     "dev:example": "cd example && npm run dev",
     "build:example": "cd example && npm run build"
