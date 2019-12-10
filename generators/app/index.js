@@ -2,13 +2,10 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
-
+const shell = require("shelljs");
 module.exports = class extends Generator {
   writing() {
-    this.fs.copy(
-      this.templatePath("babel.config.js"),
-      this.destinationPath("babel.config.js")
-    );
+    this.log(JSON.stringify(shell.ls("-a")));
   }
 
   install() {}
