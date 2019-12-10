@@ -30,26 +30,9 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(this.templatePath("*"), this.destinationRoot(), {
+    this.fs.copy(this.templatePath("**"), this.destinationRoot(), {
       globOptions: { dot: true }
     });
-    this.fs.copy(this.templatePath("src/*"), this.destinationPath("src/"), {
-      globOptions: { dot: true }
-    });
-    this.fs.copy(
-      this.templatePath("example/*"),
-      this.destinationPath("example/"),
-      {
-        globOptions: { dot: true }
-      }
-    );
-    this.fs.copy(
-      this.templatePath("example/src/*"),
-      this.destinationPath("example/src/"),
-      {
-        globOptions: { dot: true }
-      }
-    );
   }
 
   install() {
