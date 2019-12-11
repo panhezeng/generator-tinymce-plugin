@@ -50,8 +50,8 @@
     "tinymce": "~5"
   },
   "engines": {
-    "node": "latest",
-    "npm": "latest"
+    "node": ">=12",
+    "npm": ">=6"
   },
   "private": false,
   "husky": {

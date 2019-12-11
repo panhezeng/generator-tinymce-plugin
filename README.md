@@ -1,4 +1,4 @@
-# generator-tinymce-plugin
+# generator-tinymce-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url][![semantic-release][sem-rel-img]][sem-rel-url]
 
 
 ## 编译

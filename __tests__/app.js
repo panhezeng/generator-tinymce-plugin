@@ -5,12 +5,10 @@ const helpers = require("yeoman-test");
 
 describe("generator-tinymce-plugin-es:app", () => {
   beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, "../generators/app"))
-      .withPrompts({ someAnswer: true });
+    return helpers.run(path.join(__dirname, "../generators/app"));
   });
 
   it("creates files", () => {
-    assert.file([".eslintrc.js", "src/index.js", "example/src/index.js"]);
+    assert.file([".gitignore"]);
   });
 });

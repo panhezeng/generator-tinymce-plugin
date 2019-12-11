@@ -1,6 +1,6 @@
 {
   "name": "@panhezeng/generator-tinymce-plugin",
-  "version": "0.0.5",
+  "version": "0.0.0-development",
   "description": "generator tinymce plugin",
   "keywords": [
     "tinymce plugin",
@@ -26,17 +26,16 @@
   "bin": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panhezeng/generator-tinymce-plugin.git"
+    "url": "https://github.com/panhezeng/generator-tinymce-plugin.git"
   },
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "config": {},
   "dependencies": {
     "yeoman-generator": "^2.0.1",
-    "chalk": "^2.1.0",
-    "yosay": "^2.0.1",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
@@ -48,12 +47,13 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "yeoman-assert": "^3.1.0",
-    "yeoman-test": "^1.7.0"
+    "yeoman-test": "^1.7.0",
+    "semantic-release": "^15.13.31"
   },
   "peerdependencies": {},
   "engines": {
-    "node": "latest",
-    "npm": "latest"
+    "node": ">=12",
+    "npm": ">=6"
   },
   "private": false,
   "husky": {

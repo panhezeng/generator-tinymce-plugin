@@ -1,14 +1,9 @@
-# TinyMCE Plugin
+# TinyMCE Plugin: <%= pluginName %>
 
 ## 示例
 
 [点击预览](https://panhezeng.github.io/tinymce-plugin-text-indent-outdent/)
 
-官方的 indent 不是 text-indent，于是自己写了一个。
-
-基于官方 indent 相关代码开发
-
-pluginTextIndentOutdent 如果不传，默认值是 2px
 
 使用
 
