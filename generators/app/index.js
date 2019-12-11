@@ -4,12 +4,6 @@ const shell = require("shelljs");
 shell.config.globOptions = { dot: true };
 module.exports = class extends Generator {
   writing() {
-    // this.log(JSON.stringify(shell.ls("-A", this.sourceRoot())));
-    // this.log(
-    //   JSON.stringify(
-    //     shell.cp("-Rf", this.sourceRoot() + "/*", this.destinationRoot())
-    //   )
-    // );
     shell.ls("-RA", this.sourceRoot()).forEach(file => {
       const templatePath = this.templatePath(file);
       const destinationPath = this.destinationPath(file);
@@ -31,6 +25,5 @@ module.exports = class extends Generator {
       }
     });
   }
-
   install() {}
 };

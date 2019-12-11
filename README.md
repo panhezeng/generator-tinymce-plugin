@@ -1,12 +1,63 @@
-# generator-tinymce-plugin [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+# generator-tinymce-plugin [![Build Status](https://travis-ci.org/panhezeng/generator-tinymce-plugin.svg?branch=master)](https://travis-ci.org/panhezeng/generator-tinymce-plugin)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)[![Coverage Status](https://coveralls.io/repos/github/panhezeng/generator-tinymce-plugin/badge.svg?branch=master)](https://coveralls.io/github/panhezeng/generator-tinymce-plugin?branch=master)
 
-## 手动发布
+[![NPM](https://nodei.co/npm/@panhezeng/generator-tinymce-plugin.png?compact=true)](https://nodei.co/npm/@panhezeng/generator-tinymce-plugin/)
+
+> tinymce plugin scaffolding
+
+## Installation
+
+First, install [Yeoman](https://yeoman.io) and generator-tinymce-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+
+### From GitHub
+
+To install a pre-release version:
 
 ```bash
-# 发布
-npm set registry https://registry.npmjs.org/ && npm set @panhezeng:registry https://registry.npmjs.org/ && npm publish --access public && npm set registry https://registry.npm.taobao.org/ && npm set @panhezeng:registry https://registry.npm.taobao.org/
+npm i -g yo
+npm i -g git://github.com/panhezeng/generator-tinymce-plugin.git
+```
 
-# 发布patch
-npm set registry https://registry.npmjs.org/ && npm set @panhezeng:registry https://registry.npmjs.org/ && npm version patch && npm publish --access public && npm set registry https://registry.npm.taobao.org/ && npm set @panhezeng:registry https://registry.npm.taobao.org/
+### Official release
+
+To install a version published to npm:
+
+```bash
+npm i -g yo
+npm i -g @panhezeng/generator-tinymce-plugin
+```
+
+### From Source
+
+Alternatively, if you have cloned this repo from GitHub. You can symlink your local clone into your global node environment. This is particularly useful during development. From inside the folder with the cloned repo:
+
+```bash
+npm install -g yo
+npm i
+npm link
+```
+
+## Using the Generator
+
+Then generate your new project: Create a new project folder and navigate to it in you CLI.
+
+```bash
+mkdir myApp
+cd myApp
+```
+
+Then run the generator. If you installed from source or GitHub,
+
+```bash
+yo tinymce-plugin
+```
+
+or if you installed from npm:
 
 ```
+yo @panhezeng/tinymce-plugin
+```
+
+## Development
+
+[Yeoman](https://yeoman.io)
+[semantic-release](https://github.com/semantic-release/semantic-release)
