@@ -79,5 +79,12 @@
   ],
   "jest": {
     "testEnvironment": "node"
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/changelog"
+      ]
+    ]
   }
 }
