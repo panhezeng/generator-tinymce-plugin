@@ -31,7 +31,8 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
   },
   "config": {
     "commitizen": {
