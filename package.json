@@ -39,6 +39,7 @@
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.6",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
