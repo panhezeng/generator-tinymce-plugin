@@ -1,2 +1,6 @@
-coverage
+/dist/**
+/docs/**
+/static/**
+/coverage/**
+*.min.js
 **/templates
