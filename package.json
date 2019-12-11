@@ -1,6 +1,6 @@
 {
   "name": "@panhezeng/generator-tinymce-plugin",
-  "version": "0.0.5",
+  "version": "0.0.0-development",
   "description": "generator tinymce plugin",
   "keywords": [
     "tinymce plugin",
@@ -56,6 +56,9 @@
     "npm": ">=6"
   },
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -82,7 +85,7 @@
       [
         "@semantic-release/npm",
         {
-          "publish": true
+          "npmPublish": true
         }
       ]
     ]
