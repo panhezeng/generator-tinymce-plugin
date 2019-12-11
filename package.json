@@ -33,13 +33,19 @@
     "test": "jest",
     "semantic-release": "semantic-release"
   },
-  "config": {},
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "yeoman-generator": "^2.0.1",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.6",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -48,6 +54,7 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "semantic-release": "^15.13.31",
+    "validate-commit-msg": "^2.14.0",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^1.7.0"
   },
@@ -62,6 +69,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "validate-commit-msg",
       "pre-commit": "lint-staged"
     }
   },
