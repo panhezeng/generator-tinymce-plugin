@@ -79,15 +79,5 @@
   ],
   "jest": {
     "testEnvironment": "node"
-  },
-  "release": {
-    "plugins": [
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": true
-        }
-      ]
-    ]
   }
 }
