@@ -44,6 +44,8 @@
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@semantic-release/changelog": "^3.0.6",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
@@ -55,7 +57,6 @@
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "semantic-release": "^15.13.31",
-    "validate-commit-msg": "^2.14.0",
     "yeoman-assert": "^3.1.0",
     "yeoman-test": "^1.7.0"
   },
@@ -70,7 +71,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "validate-commit-msg",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
