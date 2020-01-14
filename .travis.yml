@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - 13
+  - node
 
 jobs:
   include:
@@ -9,9 +9,8 @@ jobs:
       node_js: node
       script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
     - stage: release
-      node_js: lts/*
+      node_js: node
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - npx semantic-release
+        script: npx semantic-release

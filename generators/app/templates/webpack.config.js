@@ -1,7 +1,10 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const config = {
   output: {
-    path: path.resolve(__dirname, "dist/tinymce-plugin-text-indent-outdent"),
+    path: path.resolve(__dirname, "dist/<%= pluginID %>"),
     filename: "plugin.min.js"
   },
   module: {
@@ -14,12 +17,24 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".css"]
+    extensions: [
+      ".js",
+      ".ts",
+      ".jsx",
+      ".vue",
+      ".css",
+      ".less",
+      ".scss",
+      ".json"
+    ]
   },
   externals: {
     tinymce: "tinymce"
   },
-  plugins: []
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin([{ context: "static", from: "**/*" }])
+  ]
 };
 
 module.exports = (env, argv) => {

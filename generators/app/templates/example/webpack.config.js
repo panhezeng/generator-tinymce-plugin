@@ -1,6 +1,6 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const shell = require("shelljs");
 
 const outputPath = path.resolve(__dirname, "../docs");
 
@@ -18,14 +18,23 @@ const config = {
     ]
   },
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".css"]
+    extensions: [
+      ".js",
+      ".ts",
+      ".jsx",
+      ".vue",
+      ".css",
+      ".less",
+      ".scss",
+      ".json"
+    ]
   },
   externals: {
     react: "React",
     "react-dom": "ReactDOM",
     tinymce: "tinymce"
   },
-  plugins: []
+  plugins: [new CleanWebpackPlugin()]
 };
 
 module.exports = (env, argv) => {
@@ -34,7 +43,6 @@ module.exports = (env, argv) => {
     template: "index.html"
   };
   if (argv.mode === "production") {
-    shell.rm("-rf", outputPath);
     HtmlWebpackPluginOptions.script = "production.min";
   }
   config.plugins.push(new HtmlWebpackPlugin(HtmlWebpackPluginOptions));

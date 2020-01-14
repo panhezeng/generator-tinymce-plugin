@@ -1,4 +1,4 @@
-# generator-tinymce-plugin [![Build Status](https://travis-ci.org/panhezeng/generator-tinymce-plugin.svg?branch=master)](https://travis-ci.org/panhezeng/generator-tinymce-plugin)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)[![Coverage Status](https://coveralls.io/repos/github/panhezeng/generator-tinymce-plugin/badge.svg?branch=master)](https://coveralls.io/github/panhezeng/generator-tinymce-plugin?branch=master)
+# generator-tinymce-plugin [![Coverage Status](https://coveralls.io/repos/github/panhezeng/generator-tinymce-plugin/badge.svg?branch=master)](https://coveralls.io/github/panhezeng/generator-tinymce-plugin?branch=master)[![Build Status](https://travis-ci.org/panhezeng/generator-tinymce-plugin.svg?branch=master)](https://travis-ci.org/panhezeng/generator-tinymce-plugin)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![NPM](https://nodei.co/npm/@panhezeng/generator-tinymce-plugin.png?compact=true)](https://nodei.co/npm/@panhezeng/generator-tinymce-plugin/)
 
@@ -59,5 +59,12 @@ yo @panhezeng/tinymce-plugin
 
 ## Development
 
-[Yeoman](https://yeoman.io)
-[semantic-release](https://github.com/semantic-release/semantic-release)
+- [Creating a yeoman generator](https://yeoman.io/authoring/)
+- [prompt question descriptor objects](https://github.com/SBoudrias/Inquirer.js/#question)
+- [child_process_child_process_spawn_command_args_options](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)
+- [shelljs cheatsheet](https://devhints.io/shelljs)
+- [semantic-release-cli setup](https://semantic-release.gitbook.io/semantic-release/usage/getting-started)
+
+### test
+
+`npm link`比`npm run test`更好
