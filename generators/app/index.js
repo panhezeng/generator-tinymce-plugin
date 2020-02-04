@@ -24,6 +24,12 @@ function toLowerKebabCase(value) {
 }
 
 module.exports = class extends Generator {
+  constructor(args, opts) {
+    super(args, opts);
+
+    // This method adds support for a `--install` flag
+    this.option("install", { type: Boolean, default: true });
+  }
   async prompting() {
     this.log("Welcome to the tinymce plugin generator!");
     const destinationRoot = this.destinationRoot();
@@ -171,23 +177,25 @@ module.exports = class extends Generator {
     });
   }
   install() {
-    this.spawnCommandSync("git", ["init"]);
-    this.spawnCommandSync("git", ["add", "."]);
-    this.spawnCommandSync("git", ["commit", "-m", "'init'"]);
-    this.spawnCommandSync("git", [
-      "remote",
-      "add",
-      "origin",
-      `git@github.com:${this.answers.githubUsername}/${this.answers.githubRepositoryName}.git`
-    ]);
-    this.spawnCommandSync("git", ["remote", "-v"]);
-    // this.spawnCommandSync("git", ["push", "-u", "origin", "master"]);
-    this.spawnCommandSync("npm", ["install"]);
-    const exampleOpt = {
-      cwd: `${this.destinationRoot()}/example`
-    };
-    this.log(exampleOpt.cwd);
-    this.spawnCommandSync("npm", ["install"], exampleOpt);
-    this.spawnCommandSync("npm", ["run", "dev"], exampleOpt);
+    if (this.options.install) {
+      this.spawnCommandSync("git", ["init"]);
+      this.spawnCommandSync("git", ["add", "."]);
+      this.spawnCommandSync("git", ["commit", "-m", "'init'"]);
+      this.spawnCommandSync("git", [
+        "remote",
+        "add",
+        "origin",
+        `git@github.com:${this.answers.githubUsername}/${this.answers.githubRepositoryName}.git`
+      ]);
+      this.spawnCommandSync("git", ["remote", "-v"]);
+      // this.spawnCommandSync("git", ["push", "-u", "origin", "master"]);
+      this.spawnCommandSync("npm", ["install"]);
+      const exampleOpt = {
+        cwd: `${this.destinationRoot()}/example`
+      };
+      this.log(exampleOpt.cwd);
+      this.spawnCommandSync("npm", ["install"], exampleOpt);
+      this.spawnCommandSync("npm", ["run", "dev"], exampleOpt);
+    }
   }
 };

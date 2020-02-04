@@ -15,21 +15,27 @@
 ```javascript
 tinymce.init({
   selector: "textarea.tinymce",
-  plugins: "<%= githubRepositoryName %>",
+  plugins:
+    "<%= pluginID %> print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons  ",
   menu: {
-    example: { title: "Example Menu", items: "example" }
+    myallmenus: {
+      title: "My all menus",
+      items: "mymenu | mynestedmenu | mytogglemenu"
+    }
   },
-  menubar: "file edit example",
-  toolbar: "code | example"
+  menubar: "edit myallmenus",
+  toolbar:
+    "code | mybutton | mytogglebutton | mysplitbutton | mymenubutton | mysidebar",
+  min_height: 600
 });
 ```
 
 ## Development
 
 - [Create a plugin for TinyMCE](https://www.tiny.cloud/docs/advanced/creating-a-plugin/)
-- [How to create custom toolbar buttons](https://www.tiny.cloud/docs/ui-components/toolbarbuttons/)
-- [Types of toolbar buttons](https://www.tiny.cloud/docs/ui-components/typesoftoolbarbuttons/)
-- [How to create custom menu items](https://www.tiny.cloud/docs/ui-components/menuitems/)
+- [How to create custom UI components](https://www.tiny.cloud/docs/ui-components/)
+- [Editor icon identifiers](https://www.tiny.cloud/docs/advanced/editor-icon-identifiers/)
+- [Editor events](https://www.tiny.cloud/docs/advanced/events/)
 - [semantic-release-cli setup](https://semantic-release.gitbook.io/semantic-release/usage/getting-started)
 
 ### Test

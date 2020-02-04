@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    jest: true,
+    jest: true
   },
   plugins: ["prettier"],
   extends: ["plugin:prettier/recommended"],
