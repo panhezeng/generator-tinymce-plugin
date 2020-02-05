@@ -29,6 +29,7 @@
     "url": "https://github.com/panhezeng/generator-tinymce-plugin.git"
   },
   "scripts": {
+    "lint": "eslint --fix 'generators/**/*.{js,ts,jsx,vue}'",
     "test": "jest --install=false",
     "test:install": "jest",
     "semantic-release": "semantic-release",
