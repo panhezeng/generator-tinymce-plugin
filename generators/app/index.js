@@ -202,7 +202,6 @@ module.exports = class extends Generator {
       const exampleOpt = {
         cwd: `${this.destinationRoot()}/example`
       };
-      this.log(exampleOpt.cwd);
       this.spawnCommandSync("npm", ["install"], exampleOpt);
       this.spawnCommandSync("npm", ["run", "dev"], exampleOpt);
     }
