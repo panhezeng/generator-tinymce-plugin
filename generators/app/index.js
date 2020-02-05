@@ -38,8 +38,17 @@ module.exports = class extends Generator {
     );
     const githubRepositoryNameDefault = toLowerKebabCase(currentFolderName);
 
+    let githubUserName;
+
+    try {
+      githubUserName =
+        this.user && this.user.github && (await this.user.github.username());
+    } catch (e) {
+      githubUserName = "";
+    }
+
     const githubUsernameDefault = toLowerKebabCase(
-      (await this.user.github.username()) || this.user.git.name()
+      githubUserName || this.user.git.name()
     );
 
     const emailDefault = toLowerKebabCase(this.user.git.email());
