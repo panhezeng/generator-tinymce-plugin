@@ -179,7 +179,9 @@ module.exports = class extends Generator {
               }
             }
           }
-          pipe.to(destinationPath);
+          const array = destinationPath.split("/");
+          const end = array.pop();
+          pipe.to(array.join("/") + "/" + end.replace(/^_/, ""));
         }
       }
     });

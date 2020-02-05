@@ -16,7 +16,6 @@ shell.ls("-RA", fromPath).forEach(file => {
     } else {
       const array = destinationPath.split("/");
       const end = array.pop();
-      console.log(array.join("/") + "/_" + end);
       shell.cp(templatePath, array.join("/") + "/_" + end);
     }
   }

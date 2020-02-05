@@ -14,8 +14,8 @@ describe("generator-tinymce-plugin:app", () => {
       .withPrompts({}) // Mock the prompt answers
       .withLocalConfig({}) // Mock the local config
       .then(() => {
-        // assert.file([".gitignore"]);
-        // assert.noFileContent([["README.md", /<%=\s*[^\s]+\s*%>/g]]);
+        assert.file([".gitignore"]);
+        assert.noFileContent([["README.md", /<%=\s*[^\s]+\s*%>/g]]);
         // assert.noFile([".gitignore"]);
       });
   });
