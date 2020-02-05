@@ -33,7 +33,8 @@
     "test": "jest --install=false",
     "test:install": "jest",
     "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "templates": "node generators/src/index.js"
   },
   "config": {
     "commitizen": {

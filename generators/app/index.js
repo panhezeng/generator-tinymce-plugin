@@ -1,4 +1,3 @@
-"use strict";
 const Generator = require("yeoman-generator");
 const validate = require("validate.js");
 const _ = require("lodash");
